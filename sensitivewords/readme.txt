@@ -11,7 +11,6 @@
     (2)字段:
       struct {
         action 字符串: "query" | "add" | "remove" ---请求方法---
-        sessionID 字符串: ---用户会话ID用于鉴权---
         text 字符串: ---用户输入字符串---
       }
 
@@ -37,5 +36,6 @@
 五、返回状态码定义：
   200： 访问成功
   400： HTTP请求方法错误
-  401： 请求text为空
+  401: unmarshal json error
+  402： 请求text为空
   500: 服务器端错误
